@@ -1,6 +1,6 @@
 //Aluno: Lairton Nogueira de Almeida Neto.
 //Disciplina: Introdução à programação de computadores.
-//Desafio Super Trunfo - Nível Novato.
+//Desafio Super Trunfo - Nível intermediário.
 
 #include <stdio.h>
 
