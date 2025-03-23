@@ -1,6 +1,6 @@
 //Aluno: Lairton Nogueira de Almeida Neto.
 //Disciplina: Introdução à programação de computadores.
-//Desafio Super Trunfo - Nível novato.
+//Desafio Super Trunfo - Nível intermediário.
 
 #include <stdio.h>
 
@@ -16,6 +16,9 @@ int main() {
     float area_km2_1=1;
     float pib_1=1;
     int n_pontos_turisticos_1=1; 
+    float pib_pc = 1;
+    float densidade_pop= 1;
+    
 
 //C1 - Texto introdução
 
@@ -48,6 +51,9 @@ int main() {
     printf("Digite o número de pontos turísticos:\n");
     scanf("%d",&n_pontos_turisticos_1);
 
+    pib_pc = (float) pib_1 / (float) populacao_1; 
+    densidade_pop = (float) populacao_1 / area_km2_1;
+
 //C1 - Exibição dos dados coletados (com a função printf)
 
     printf("==========Visualização dos dados cadastrados==========\n");  
@@ -59,6 +65,8 @@ int main() {
     printf("Área da cidade: %.2fkm²\n",area_km2_1);
     printf("PIB: R$%.2f\n",pib_1);
     printf("Número de pontos turísticos: %d\n",n_pontos_turisticos_1);
+    printf("Densidade populacional: %.2f km²\n", densidade_pop);
+    printf("PIB per capta: R$%.2f\n", pib_pc);
     printf("==========Cadastro da carta 1 concluído!==========\n\n"); 
     
 //--------------------Carta 2 --------------------
@@ -71,6 +79,8 @@ int main() {
     float area_km2_2=1;
     float pib_2=1;
     int n_pontos_turisticos_2=1; 
+    float pib_pc_2 = 1;
+    float densidade_pop_2= 1;
 
 //C2 - Texto introdução
 
@@ -103,6 +113,9 @@ int main() {
     printf("Digite o número de pontos turísticos:\n");
     scanf(" %d",&n_pontos_turisticos_2);
 
+    pib_pc_2 = (float) pib_2 / (float) populacao_2; 
+    densidade_pop_2 = (float) populacao_2 / area_km2_2;
+
 //C2 - Exibição dos dados coletados (com a função printf)
 
     printf("==========Visualização dos dados cadastrados==========\n");  
@@ -114,6 +127,8 @@ int main() {
     printf("Área da cidade: %.2fkm²\n",area_km2_2);
     printf("PIB: R$%.2f\n",pib_2);
     printf("Número de pontos turísticos: %d\n",n_pontos_turisticos_2);
+    printf("Densidade populacional: %.2f km²\n", densidade_pop_2);
+    printf("PIB per capta: R$%.2f\n", pib_pc_2);
     printf("==========Cadastro da carta 2 concluído!==========\n\n"); 
 
     return 0;
