@@ -1,6 +1,6 @@
 //Aluno: Lairton Nogueira de Almeida Neto.
 //Disciplina: Introdução à programação de computadores.
-//Desafio Super Trunfo - Nível intermediário.
+//Desafio Super Trunfo - Nível Mestre.
 
 #include <stdio.h>
 
@@ -16,9 +16,9 @@ int main() {
     float area_km2_1=1;
     float pib_1=1;
     int n_pontos_turisticos_1=1; 
-    float pib_pc = 1;
-    float densidade_pop= 1;
-    
+    float pib_pc_1 = 1;
+    float densidade_pop_1 = 1;
+    float super_poder_1 = 1;
 
 //C1 - Texto introdução
 
@@ -51,8 +51,9 @@ int main() {
     printf("Digite o número de pontos turísticos:\n");
     scanf("%d",&n_pontos_turisticos_1);
 
-    pib_pc = (float) pib_1 / (float) populacao_1; 
-    densidade_pop = (float) populacao_1 / area_km2_1;
+    pib_pc_1 = (float) pib_1 / (float) populacao_1; 
+    densidade_pop_1 = (float) populacao_1 / area_km2_1;
+    super_poder_1 = (float) populacao_1 + (float) area_km2_1 + (float) pib_1 + (float) n_pontos_turisticos_1 + (float) pib_pc_1 + (float)( 1 / densidade_pop_1);
 
 //C1 - Exibição dos dados coletados (com a função printf)
 
@@ -65,13 +66,14 @@ int main() {
     printf("Área da cidade: %.2fkm²\n",area_km2_1);
     printf("PIB: R$%.2f\n",pib_1);
     printf("Número de pontos turísticos: %d\n",n_pontos_turisticos_1);
-    printf("Densidade populacional: %.2f km²\n", densidade_pop);
-    printf("PIB per capta: R$%.2f\n", pib_pc);
+    printf("Densidade populacional: %.2f km²\n", densidade_pop_1);
+    printf("PIB per capta: R$%.2f\n", pib_pc_1);
+    printf("Super poder %.2f \n", super_poder_1);
     printf("==========Cadastro da carta 1 concluído!==========\n\n"); 
     
 //--------------------Carta 2 --------------------
 //C2 - Variáveis inicializadas da carta 2
-    
+   
     char estado_2='X';
     char codigo_carta_2[20]="X01";
     char nome_cidade_2[20]="XXXX";
@@ -81,6 +83,7 @@ int main() {
     int n_pontos_turisticos_2=1; 
     float pib_pc_2 = 1;
     float densidade_pop_2= 1;
+    float super_poder_2 = 1;
 
 //C2 - Texto introdução
 
@@ -115,6 +118,7 @@ int main() {
 
     pib_pc_2 = (float) pib_2 / (float) populacao_2; 
     densidade_pop_2 = (float) populacao_2 / area_km2_2;
+    super_poder_2 = (float) populacao_2 + (float) area_km2_2 + (float) pib_2 + (float) n_pontos_turisticos_2 + (float) pib_pc_2 + (float)( 1 / densidade_pop_2);
 
 //C2 - Exibição dos dados coletados (com a função printf)
 
@@ -129,7 +133,22 @@ int main() {
     printf("Número de pontos turísticos: %d\n",n_pontos_turisticos_2);
     printf("Densidade populacional: %.2f km²\n", densidade_pop_2);
     printf("PIB per capta: R$%.2f\n", pib_pc_2);
+    printf("Super poder %.2f \n", super_poder_2);
     printf("==========Cadastro da carta 2 concluído!==========\n\n"); 
+
+// C1 vs. C2 - Comparação entre a carta 1 e carta 2
+
+    printf("==========Carta 1 vs. Carta 2========== \n");
+    printf("Interpretação dos resultados: \n");
+    printf("Se o resultado for 1, carta 1 venceu, se for 0, carta 2 venceu. \n \n");
+    printf("População:                  Carta 1 > Carta 2 = %d \n", (populacao_1 > populacao_2));
+    printf("Área:                       Carta 2 > Carta 2 = %d \n", (area_km2_1 > area_km2_2));
+    printf("PIB:                        Carta 2 > Carta 2 = %d \n", (pib_1 > pib_2));
+    printf("N° de Turismo:              Carta 2 > Carta 2 = %d \n", (n_pontos_turisticos_1 > n_pontos_turisticos_2));
+    printf("Densidade Populacional:     Carta 2 < Carta 2 = %d \n", (densidade_pop_1 < densidade_pop_2));
+    printf("PIB per capta:              Carta 2 > Carta 2 = %d \n", (pib_pc_1 > pib_pc_2));
+    printf("Super poder:                Carta 2 > Carta 2 = %d \n", (super_poder_1 > super_poder_2));
+    printf("Fim de jogo! \n");
 
     return 0;
 }
